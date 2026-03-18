@@ -41,7 +41,7 @@ except ModuleNotFoundError:
     )
 
 
-mcp = FastMCP("Cognee")
+mcp = FastMCP("Cognee", host="0.0.0.0")
 
 # Register custom skill improvement tools
 try:
