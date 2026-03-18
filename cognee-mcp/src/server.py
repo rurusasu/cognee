@@ -43,6 +43,13 @@ except ModuleNotFoundError:
 
 mcp = FastMCP("Cognee")
 
+# Register custom skill improvement tools
+try:
+    from skills_tools import register_tools
+    register_tools(mcp)
+except ImportError:
+    pass  # skills_tools not available (vanilla cognee-mcp)
+
 logger = get_logger()
 
 cognee_client: Optional[CogneeClient] = None
