@@ -25,8 +25,7 @@ jobs:
     if: ${{ inputs.databases == 'all' || contains(inputs.databases, 'kuzu') }}
     steps:
       - name: Check out
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -72,8 +71,7 @@ jobs:
     if: ${{ inputs.databases == 'all' || contains(inputs.databases, 'neo4j') }}
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:

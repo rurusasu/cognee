@@ -31,8 +31,7 @@ jobs:
       EMBEDDING_API_VERSION: ${{ secrets.EMBEDDING_API_VERSION }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -62,8 +61,7 @@ jobs:
       EMBEDDING_API_VERSION: ${{ secrets.EMBEDDING_API_VERSION }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -93,8 +91,7 @@ jobs:
       EMBEDDING_API_VERSION: ${{ secrets.EMBEDDING_API_VERSION }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -124,8 +121,7 @@ jobs:
       EMBEDDING_API_VERSION: ${{ secrets.EMBEDDING_API_VERSION }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup

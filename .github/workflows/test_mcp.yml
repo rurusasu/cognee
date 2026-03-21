@@ -8,17 +8,18 @@ on:
         type: string
         default: "local" # local - Installing Cognee from local source
         description: "Pypi-compatible version of cognee to use. For example, 0.5.2.dev0. `local` (default) - Installing Cognee from local source"
+permissions:
+  contents: read
+
 jobs:
   test-mcp:
     name: Run MCP Test
     runs-on: ubuntu-22.04
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405        with:
           python-version: ${{ inputs.python-version }}
 
       - name: Install UV

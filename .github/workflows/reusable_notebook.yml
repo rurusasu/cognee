@@ -31,6 +31,9 @@ on:
       EMBEDDING_API_VERSION:
         required: true
 
+permissions:
+  contents: read
+
 env:
   RUNTIME__LOG_LEVEL: ERROR
 
@@ -45,8 +48,7 @@ jobs:
         shell: bash
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:

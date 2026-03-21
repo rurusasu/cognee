@@ -17,6 +17,9 @@ on:
       POSTGRES_PASSWORD:
         required: false
 
+permissions:
+  contents: read
+
 jobs:
   # run-chromadb-tests:
   #   name: ChromaDB Tests
@@ -84,8 +87,7 @@ jobs:
           - 5432:5432
     steps:
       - name: Check out
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -131,8 +133,7 @@ jobs:
           - 5432:5432
     steps:
       - name: Check out
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -166,8 +167,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
