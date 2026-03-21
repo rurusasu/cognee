@@ -45,8 +45,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -74,8 +73,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -100,8 +98,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -148,8 +145,7 @@ jobs:
           - 5432:5432
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -175,8 +171,7 @@ jobs:
       container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
       steps:
         - name: Check out repository
-          uses: actions/checkout@v6
-
+          uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         - name: Cognee Setup
           uses: ./.github/actions/cognee_setup
           with:
@@ -205,8 +200,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -235,8 +229,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -262,8 +255,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -289,8 +281,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
-
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -316,8 +307,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -346,8 +336,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -373,8 +362,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -400,8 +388,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
-
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -426,8 +413,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v4
-        with:
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -454,8 +440,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v4
-        with:
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -482,8 +467,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v4
-        with:
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -510,8 +494,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -544,8 +527,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v4
-        with:
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -572,8 +554,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -598,8 +579,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -624,8 +604,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -650,8 +629,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -684,8 +662,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -742,8 +719,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -781,8 +757,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -839,8 +814,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -896,8 +870,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -951,8 +924,7 @@ jobs:
           - 5432:5432
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -988,8 +960,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -1053,8 +1024,7 @@ jobs:
           --health-retries 5
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -1101,8 +1071,7 @@ jobs:
           --health-retries 5
     steps:
       - name: Check out
-        uses: actions/checkout@master
-
+        uses: actions/checkout@61b9e3751b92087fd0b06925ba6dd6314e06f089
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:
@@ -1142,8 +1111,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -1171,8 +1139,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -1200,8 +1167,7 @@ jobs:
     container: ${{ inputs.ci-image != '' && fromJSON(format('{{"image":"{0}","credentials":{{"username":"{1}","password":"{2}"}}}}', inputs.ci-image, github.actor, github.token)) || null }}
     steps:
       - name: Check out
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -1243,8 +1209,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Cognee Setup
         uses: ./.github/actions/cognee_setup
         with:

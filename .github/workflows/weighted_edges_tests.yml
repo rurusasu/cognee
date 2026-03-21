@@ -18,6 +18,9 @@ on:
       - 'examples/demos/dynamic_multiple_weighted_edges_example.py'
       - '.github/workflows/weighted_edges_tests.yml'
 
+permissions:
+  contents: read
+
 env:
   RUNTIME__LOG_LEVEL: ERROR
   ENV: 'dev'
@@ -36,8 +39,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -77,8 +79,7 @@ jobs:
       EMBEDDING_API_VERSION: ${{ secrets.EMBEDDING_API_VERSION }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -120,8 +121,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -150,8 +150,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
-        with:
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd        with:
           fetch-depth: 0
 
       - name: Cognee Setup
@@ -160,11 +159,9 @@ jobs:
           python-version: '3.11'
 
       - name: Run Linting on Weighted Edges Files
-        uses: astral-sh/ruff-action@v3
-        with:
+        uses: astral-sh/ruff-action@4919ec5cf1f49eff0871dbcea0da843445b837e6        with:
           args: "check cognee/modules/graph/utils/get_graph_from_model.py cognee/tests/unit/interfaces/graph/test_weighted_edges.py examples/demos/dynamic_multiple_weighted_edges_example.py"
 
       - name: Run Formatting Check on Weighted Edges Files
-        uses: astral-sh/ruff-action@v3
-        with:
+        uses: astral-sh/ruff-action@4919ec5cf1f49eff0871dbcea0da843445b837e6        with:
           args: "format --check cognee/modules/graph/utils/get_graph_from_model.py cognee/tests/unit/interfaces/graph/test_weighted_edges.py examples/demos/dynamic_multiple_weighted_edges_example.py"

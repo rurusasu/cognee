@@ -3,6 +3,9 @@ name: build test | Docker image
 on:
   workflow_call:
 
+permissions:
+  contents: read
+
 env:
   AWS_ACCOUNT_ID_DEV: "463722570299"
 
@@ -13,8 +16,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out Cognee code
-        uses: actions/checkout@v6
-
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Build Cognee Docker image
         id: cognee-docker-tag
         run: |

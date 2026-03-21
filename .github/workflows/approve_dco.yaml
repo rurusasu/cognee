@@ -4,13 +4,15 @@ on:
   pull_request:
     types: [opened, edited, reopened, synchronize, ready_for_review]
 
+permissions:
+  contents: read
+
 jobs:
   check-dco:
     runs-on: ubuntu-latest
     steps:
       - name: Validate Developer Certificate of Origin statement
-        uses: actions/github-script@v8
-        with:
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd        with:
           # If using the built-in GITHUB_TOKEN, ensure it has 'read:org' permission.
           # In GitHub Enterprise or private orgs, you might need a PAT (personal access token) with read:org scope.
           github-token: ${{ secrets.GITHUB_TOKEN }}
